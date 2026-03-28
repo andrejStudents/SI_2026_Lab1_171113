@@ -60,13 +60,12 @@ class Library {
         return false;
     }
 
-    // TODO: Implement in branch feature-borrow-book
     public void borrowBook(String title) {
         for (Book book : books) {
             if (book.getTitle().equalsIgnoreCase(title)) {
                 if (!book.isBorrowed()) {
                     book.setBorrowed(true);
-                    System.out.println("Book borrowed.");
+                    System.out.println("Borrowed successfully.");
                 } else {
                     System.out.println("Book is already borrowed.");
                 }
@@ -126,5 +125,7 @@ public class SI2026Lab1Main {
         System.out.println("Library initialized.");
         System.out.println("Search 'The Hobbit': " + library.searchBookByTitle("The Hobbit"));
         System.out.println("Search 'Red Rising': " + library.searchBookByTitle("Red Rising"));
+
+        library.borrowBook("The Hobbit");
     }
 }
