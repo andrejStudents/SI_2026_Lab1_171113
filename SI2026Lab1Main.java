@@ -60,7 +60,6 @@ class Library {
         return false;
     }
 
-    // TODO: Implement in branch feature-borrow-book
     public void borrowBook(String title) {
         for (Book book : books) {
             if (book.getTitle().equalsIgnoreCase(title)) {
@@ -133,5 +132,6 @@ public class SI2026Lab1Main {
 
         System.out.println("Books in genre Programming:");
         library.printBooksByGenre("Programming");
+        library.borrowBook("The Hobbit");
     }
 }
