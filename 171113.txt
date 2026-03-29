@@ -1,0 +1,31 @@
+git checkout -b feature-search-books
+git add SI2025Lab1Main.java
+git commit -m "Implement book search"
+git push origin
+
+git checkout master
+git merge feature-search-books
+
+Merge type: fast-forward
+
+Output:
+* 70c8b5f (HEAD -> master, origin/feature-search-books, feature-search-books) Implement book search
+* 64bc25f (origin/master, origin/HEAD) Add starter code
+* 12ddb21 Initial commit
+
+git branch feature-borrow-book
+git branch feature-genre-report
+git checkout feature-borrow-book
+
+git merge master
+git commit
+
+Type: recursive
+With conflict, accept incoming
+
+git checkout master
+git merge feature-genre-report
+Recursive merge, затоа што има паралелни промени
+
+git merge feature-borrow-book
+Recursive merge, затоа што има паралелни промени
